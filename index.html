@@ -13,15 +13,14 @@
       <div class="jumbotron">
         <h1>Galactic Age Checker</h1>
       </div>
-      <form id="ageEntry">
+      <form id="birthYear">
         <div class="form-group">
-          <div class="form-group">
-            <label for="age">Age:</label>
-            <input id="age" type="text" name="age">
-          </div>
+          <label for="yearInput">What year we're you born:</label>
+          <input id="yearInput" type="number" placeholder="YYYY" required>
         </div>
-        <button type="submit">Check!</button>
+        <button class="btn btn-succes" type="submit">Check!</button>
       </form>
+      <h3><span id="output1"></span></h3>
     </div>
   </body>
 </html>
