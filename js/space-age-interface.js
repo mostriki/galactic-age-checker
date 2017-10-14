@@ -1,4 +1,4 @@
-// import { SpaceAge } from './../js/age-checker.js';
+// import { SpaceAge } from './../js/space-age.js';
 //
 // $(document).ready(function() {
 //   $('#birthYear').submit(function(event) {
