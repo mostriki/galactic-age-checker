@@ -1,17 +1,24 @@
 export class SpaceAge {
-  constructor(age, years) {
-    this.years = years;
+  constructor(age, birthday, yearToSeconds) {
+    this.age = age;
+    this.birthday = birthday;
     this.yearToSeconds = 31536000;
 
   }
 
   // convert age (in years) to seconds
   ageToSeconds() {
-    return Math.floor(this.yearToSeconds * this.years);
+    return this.yearToSeconds * this.age;
   }
 
   // calculate age on Earth in seconds
   humanYears() {
+    let today;
+    let age;
+
+    today = new Date();
+    console.log(today);
+    return age = Math.floor((today - this.birthday)/1000/60/60/24/365);
 
   }
 
