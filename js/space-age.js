@@ -7,7 +7,7 @@ export class SpaceAge {
 
   // convert age (in years) to seconds
   ageToSeconds() {
-    return Math.floor(this.yearToSeconds * 30);
+    return Math.floor(this.yearToSeconds * this.years);
   }
 
   // calculate age on Earth in seconds

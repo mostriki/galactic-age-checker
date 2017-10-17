@@ -4,16 +4,16 @@ describe('SpaceAge', () => {
   let input;
   beforeEach(() => {
     input = new SpaceAge();
-    // input.years();
+    input.years = "30";
   });
 
-  it('should convert age to seconds', function() {
+  it('should convert age to seconds', () => {
     expect(input.ageToSeconds()).toEqual(946080000);
   });
 
-  // it('should return the users age', () => {
-  //   expect(input.years).toEqual("30");
-  // });
+  it('should return the users age', () => {
+    expect(input.years).toEqual("30");
+  });
 
   it('should return a single year in seconds', () => {
     expect(input.yearToSeconds).toEqual(31536000);
