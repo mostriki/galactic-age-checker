@@ -13,17 +13,17 @@ describe('SpaceAge', function() {
 
   it('should calculate your age in Martian Sols.', function() {
     let input = new SpaceAge(30);
-    expect(input.venusianYears()).toEqual(48.4);
+    expect(input.venusianYears()).toEqual(48);
   });
 
   it('should calculate your age in Martian Sols.', function() {
     let input = new SpaceAge(30);
-    expect(input.martianYears()).toEqual(16);
+    expect(input.martianYears()).toEqual(15);
   });
 
   it('should calculate your age in Martian Sols.', function() {
     let input = new SpaceAge(30);
-    expect(input.jovianYears()).toEqual(2.5);
+    expect(input.jovianYears()).toEqual(2);
   });
 
 });
