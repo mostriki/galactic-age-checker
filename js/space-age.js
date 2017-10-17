@@ -17,9 +17,7 @@ export class SpaceAge {
     let age;
 
     today = new Date();
-    console.log(today);
     return age = Math.floor((today - this.birthday)/1000/60/60/24/365);
-
   }
 
   // calculate age on Mercury

@@ -18,7 +18,6 @@ describe('SpaceAge', () => {
   });
 
   it('should calculate a users age from 2 dates', () => {
-    console.log(input);
     expect(input.humanYears()).toEqual(30);
   });
 
