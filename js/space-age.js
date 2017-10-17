@@ -1,34 +1,34 @@
 export class SpaceAge {
-  constructor(birthday) {
+  constructor(age) {
     this.age = age;
   }
 
   // convert age (in years) to seconds
-  ageToSeconds(years) => {
+  ageToSeconds() {
 
   }
   // calculate age on Earth in seconds
-  humanYears(years) => {
+  humanYears() {
 
   }
   // calculate age on Mercury
-  mercurianYears(years) => {
-    return parseFloat((years/0.24).toFixed(1));
+  mercurianYears() {
+    return parseFloat((this.age/0.24).toFixed(1));
   }
   // calculate age on Venus
-  venusianYears(years) => {
-    return parseFloat((years/0.62).toFixed(1));
+  venusianYears() {
+    return parseFloat((this.age/0.62).toFixed(1));
   }
   // calculate age on Mars
-  martianYears(years) => {
-    return parseFloat((years/1.88).toFixed(1));
+  martianYears() {
+    return parseFloat((this.age/1.88).toFixed(1));
   }
   // calculate age on Jupiter
-  jovianYears(years) => {
-    return parseFloat((years/11.86).toFixed(1));
+  jovianYears() {
+    return parseFloat((this.age/11.86).toFixed(1));
   }
   //calculate planetary life expectancy
-  lifeExpectancy () => {
+  lifeExpectancy () {
 
   }
 
