@@ -7,6 +7,7 @@ describe('SpaceAge', () => {
     input = new SpaceAge();
     input.age = "30";
     input.birthday = new Date("May 29, 1987 00:00:00");
+    input.planet = "Mercury";
   });
 
   it('should return a single year in seconds', () => {
@@ -24,7 +25,6 @@ describe('SpaceAge', () => {
   it('should return the users age in years', () => {
     expect(input.age).toEqual("30");
   });
-
 
   it('should calculate your age in Martian Sols.', () => {
     expect(input.mercurianYears("30")).toEqual(125);
@@ -46,11 +46,11 @@ describe('SpaceAge', () => {
     expect(input.earthExpectancy).toEqual(71);
   });
 
-  it('should calculate how many years a user has left to live on Earth', () => {
-    expect(input.surpassesExpectancy("30", "71")).toEqual("Don't worry, you're not pushing daisys yet.");
+  it('should calculate how many years a user has left to live on Mercury', () => {
+    expect(input.planetaryExpectancy()).toEqual(170);
   });
 
-  // it('should calculate how many years a user has left to live on Mercury', () => {
-  //   expect(input.mercurianExpectancy()).toEqual("If you managed to stay concious and survive the bursting of your skin's small blood vessels, you could live to a ripe old age of 7 sols.");
-  // });
+  it('should calculate how many years a user has left to live on Earth', () => {
+    expect(input.surpassesExpectancy("30", "71")).toEqual("Don't worry, you're not pushing daisies yet.");
+  });
 });

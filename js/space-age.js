@@ -1,11 +1,14 @@
 export class SpaceAge {
-  constructor(age, birthday, yearToSeconds, avgEarthLife) {
+  constructor(age, birthday, planet) {
     this.age = age;
     this.birthday = birthday;
+    this.planet = planet;
     this.yearToSeconds = 31536000;
     this.earthExpectancy = 71;
-    // this.femaleExpectancy = 71;
-    // this.maleExpectancy = 67;
+    this.mercurianExpectancy = 295;
+    this.venusianExpectancy = 114;
+    this.martianExpectancy = 37;
+    this.jovianExpectancy = 5;
   }
 
   // convert age (in years) to seconds
@@ -41,21 +44,31 @@ export class SpaceAge {
     return Math.floor(parseFloat(years/11.86));
   }
 
-  //calculate planetary life expectancy
-  // mercurianExpectancy() {
-  //   if (this.avgExpectancy > this.age) {
-  //     return "Congratulations! I don't know how you did it, but you are the first human to survive a lifetime in space."
-  //   } else {
-  //     "If you managed to stay concious and survive the bursting of your skin's small blood vessels, you could live to a ripe old age of " + mercurianYears(this.avgExpectancy) + " sols."
-  //   }
-  // }
+  // calculate planetary life expectancy
+  planetaryExpectancy() {
+    if (this.planet == "Mercury") {
+      return (this.mercuryExpectancy - parseFloat(this.age/0.24));
+    }
+    else if (this.planet == "Venus") {
+      return (this.venusianExpectancy - parseFloat(this.age/0.62));
+    }
+    else if (this.planet == "Mars") {
+      return (this.martianExpectancy - parseFloat(this.age/0.62));
+    }
+    else if (this.planet == "Jupiter") {
+      return (this.jovianExpectancy - parseFloat(this.age/0.62));
+    }
+    else {
+      return (this.earthExpectancy - this.age);
+    }
+  }
 
   //calculate planetary excess of life expectancy
   surpassesExpectancy(age, expectancy) {
     if (parseInt(age) > parseInt(expectancy)) {
       return "You're no spring chicken, but you've got grit!";
     } else {
-      return "Don't worry, you're not pushing daisys yet.";
+      return "Don't worry, you're not pushing daisies yet.";
     }
   }
 }
