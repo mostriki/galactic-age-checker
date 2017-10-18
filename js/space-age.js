@@ -25,37 +25,37 @@ export class SpaceAge {
   }
 
   // calculate age on Mercury
-  mercurianYears(years) {
-    return Math.floor(parseFloat(years/0.24));
+  mercurianYears() {
+    return Math.floor(parseFloat(this.age/0.24));
   }
 
   // calculate age on Venus
-  venusianYears(years) {
-    return Math.floor(parseFloat(years/0.62));
+  venusianYears() {
+    return Math.floor(parseFloat(this.age/0.62));
   }
 
   // calculate age on Mars
-  martianYears(years) {
-    return Math.floor(parseFloat(years/1.88));
+  martianYears() {
+    return Math.floor(parseFloat(this.age/1.88));
   }
 
   // calculate age on Jupiter
-  jovianYears(years) {
-    return Math.floor(parseFloat(years/11.86));
+  jovianYears() {
+    return Math.floor(parseFloat(this.age/11.86));
   }
 
   // calculate planetary life expectancy
   planetaryExpectancy() {
-    if (this.planet == "Mercury") {
-      return (this.mercuryExpectancy - parseFloat(this.age/0.24));
+    if (this.planet === "Mercury") {
+      return (this.mercurianExpectancy - parseFloat(this.age/0.24));
     }
-    else if (this.planet == "Venus") {
+    else if (this.planet === "Venus") {
       return (this.venusianExpectancy - parseFloat(this.age/0.62));
     }
-    else if (this.planet == "Mars") {
+    else if (this.planet === "Mars") {
       return (this.martianExpectancy - parseFloat(this.age/0.62));
     }
-    else if (this.planet == "Jupiter") {
+    else if (this.planet === "Jupiter") {
       return (this.jovianExpectancy - parseFloat(this.age/0.62));
     }
     else {
@@ -64,8 +64,8 @@ export class SpaceAge {
   }
 
   //calculate planetary excess of life expectancy
-  surpassesExpectancy(age, expectancy) {
-    if (parseInt(age) > parseInt(expectancy)) {
+  surpassesExpectancy() {
+    if (this.age > this.earthExpectancy) {
       return "You're no spring chicken, but you've got grit!";
     } else {
       return "Don't worry, you're not pushing daisies yet.";

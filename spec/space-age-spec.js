@@ -27,19 +27,19 @@ describe('SpaceAge', () => {
   });
 
   it('should calculate your age in Martian Sols.', () => {
-    expect(input.mercurianYears("30")).toEqual(125);
+    expect(input.mercurianYears()).toEqual(125);
   });
 
   it('should calculate your age in Martian Sols.', () => {
-    expect(input.venusianYears("30")).toEqual(48);
+    expect(input.venusianYears()).toEqual(48);
   });
 
   it('should calculate your age in Martian Sols.', () => {
-    expect(input.martianYears("30")).toEqual(15);
+    expect(input.martianYears()).toEqual(15);
   });
 
   it('should calculate your age in Martian Sols.', () => {
-    expect(input.jovianYears("30")).toEqual(2);
+    expect(input.jovianYears()).toEqual(2);
   });
 
   it('should return the users avg. life expectancy on planet earth', () => {
@@ -51,6 +51,6 @@ describe('SpaceAge', () => {
   });
 
   it('should calculate how many years a user has left to live on Earth', () => {
-    expect(input.surpassesExpectancy("30", "71")).toEqual("Don't worry, you're not pushing daisies yet.");
+    expect(input.surpassesExpectancy()).toEqual("Don't worry, you're not pushing daisies yet.");
   });
 });
