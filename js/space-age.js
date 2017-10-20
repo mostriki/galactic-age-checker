@@ -3,10 +3,6 @@ export class SpaceAge {
     this.age = 0;
     this.birthday = birthday;
     this.planet = planet;
-    this.mercurianExpectancy = 295;
-    this.venusianExpectancy = 114;
-    this.martianExpectancy = 37;
-    this.jovianExpectancy = 5;
   }
 
   // convert age (in years) to seconds
@@ -45,19 +41,19 @@ export class SpaceAge {
   // calculate planetary life expectancy
   planetaryExpectancy() {
     if (this.planet === "Mercury") {
-      return (this.mercurianExpectancy - parseFloat(this.age/0.24));
+      return (295 - parseFloat(this.age/0.24));
     }
     else if (this.planet === "Venus") {
-      return (this.venusianExpectancy - parseFloat(this.age/0.62));
+      return (114 - parseFloat(this.age/0.62));
     }
     else if (this.planet === "Mars") {
-      return (this.martianExpectancy - parseFloat(this.age/0.62));
+      return (37 - parseFloat(this.age/0.62));
     }
     else if (this.planet === "Jupiter") {
-      return (this.jovianExpectancy - parseFloat(this.age/0.62));
+      return (5 - parseFloat(this.age/0.62));
     }
     else {
-      return (this.earthExpectancy - this.age);
+      return (71 - this.age);
     }
   }
 
@@ -66,7 +62,7 @@ export class SpaceAge {
     if (this.age > 71) {
       return "You're no spring chicken, but you've got grit!";
     } else {
-      return "Don't worry, you're not pushing daisies yet.";
+      return `Don't worry, you're not expected to be pushing moon rocks for another ${71 - this.age} years.`;
     }
   }
 }

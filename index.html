@@ -18,15 +18,26 @@
           <label for="birthday">When were you born? </label>
           <input id="birthday" type="date" required>
         </div>
+        <div class="form-group">
+          <label for="origin">Where are you from?</label>
+          <select class="form-control" id="origin">
+            <option value="Earth">Earth</option>
+            <option value="Mercury">Mercury</option>
+            <option value="Venus">Venus</option>
+            <option value="Mars">Mars</option>
+            <option value="Jupiter">Jupiter</option>
+          </select>
+        </div>
         <button class="btn btn-succes" type="submit">Check!</button>
-      </form>
-      <h3><span id="ageInSeconds"></span></h3>
-      <h3><span id="age"></span></h3>
-      <h3><span id="mercurianYears"></span></h3>
-      <h3><span id="venusianYears"></span></h3>
-      <h3><span id="martianYears"></span></h3>
-      <h3><span id="jovianYears"></span></h3>
-      <h3><span id="surpassesExpectancy"></span></h3>
+      </form><br>
+      <div id="ageInSeconds"></div>
+      <div id="age"></div>
+      <div id="mercurianYears"></div>
+      <div id="venusianYears"></div>
+      <div id="martianYears"></div>
+      <div id="jovianYears"></div>
+      <div id="planet"></div>
+      <div id="surpassesExpectancy"></div>
     </div>
   </body>
 </html>
