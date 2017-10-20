@@ -1,9 +1,8 @@
 export class SpaceAge {
-  constructor(age, birthday, planet) {
-    this.age = age;
+  constructor(birthday, planet) {
+    this.age = 0;
     this.birthday = birthday;
     this.planet = planet;
-    this.yearToSeconds = 31536000;
     this.earthExpectancy = 71;
     this.mercurianExpectancy = 295;
     this.venusianExpectancy = 114;
@@ -13,15 +12,15 @@ export class SpaceAge {
 
   // convert age (in years) to seconds
   ageToSeconds() {
-    return this.yearToSeconds * this.age;
+    return 31536000 * this.age;
   }
 
   // calculate age on Earth in seconds
   humanYears() {
-    let age;
-
-    let today = new Date();
-    return age = Math.floor((today - this.birthday)/1000/60/60/24/365);
+    let birthYear = parseInt(this.birthday);
+    let today = new Date().getFullYear();
+    this.age = today - birthYear;
+    return this.age
   }
 
   // calculate age on Mercury
