@@ -1,21 +1,19 @@
 import { SpaceAge } from './../js/space-age.js';
 
 $(document).ready(function() {
-  $('#birthYear').submit(function(event) {
+  $('#birthdayInput').submit(function(event) {
     event.preventDefault();
 
-    let yearInput = $('#yearInput').val();
     let birthday = $('#birthday').val();
-    let spaceage = new SpaceAge(yearInput, birthday);
-    console.log(yearInput);
-    console.log(birthday);
-        debugger;
+    let spaceage = new SpaceAge(birthday);
 
-
-
-
-    $('#output1').text(spaceage.humanYears());
-    // $('#output1').text(spaceage.age);
+    $('#age').text(spaceage.humanYears());
+    $('#ageInSeconds').text(spaceage.ageToSeconds());
+    $('#mercurianYears').text(spaceage.mercurianYears());
+    $('#venusianYears').text(spaceage.venusianYears());
+    $('#martianYears').text(spaceage.martianYears());
+    $('#jovianYears').text(spaceage.jovianYears());
+    $('#surpassesExpectancy').text(spaceage.surpassesExpectancy());
 
   });
 });

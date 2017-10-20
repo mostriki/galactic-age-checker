@@ -3,7 +3,6 @@ export class SpaceAge {
     this.age = 0;
     this.birthday = birthday;
     this.planet = planet;
-    this.earthExpectancy = 71;
     this.mercurianExpectancy = 295;
     this.venusianExpectancy = 114;
     this.martianExpectancy = 37;
@@ -64,7 +63,7 @@ export class SpaceAge {
 
   //calculate planetary excess of life expectancy
   surpassesExpectancy() {
-    if (this.age > this.earthExpectancy) {
+    if (this.age > 71) {
       return "You're no spring chicken, but you've got grit!";
     } else {
       return "Don't worry, you're not pushing daisies yet.";
